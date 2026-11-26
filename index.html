@@ -25,9 +25,18 @@
       <a href="#boys">تورت ولاد أطفال</a><a href="#girls">تورت بنات أطفال</a><a href="#occasions">تورت المناسبات</a><a href="#love">تورت الحب</a><a href="#weddings">تورت الخطوبة والأفراح</a>
       <a href="#story">قصتنا</a>
       <a href="#order">إزاي تطلب</a>
+      <a href="#contact">اطلب دلوقتي</a>
     </nav>
     <a class="wa-btn topbar-cta" href="https://wa.me/201111672753?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%AA%D9%88%D8%B1%D8%AA%D8%A9" target="_blank" rel="noopener">اطلب على واتساب</a>
+    <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#packages">الباكدجات</a>
+    <a href="#boys">تورت ولاد أطفال</a><a href="#girls">تورت بنات أطفال</a><a href="#occasions">تورت المناسبات</a><a href="#love">تورت الحب</a><a href="#weddings">تورت الخطوبة والأفراح</a>
+    <a href="#story">قصتنا</a>
+    <a href="#order">إزاي تطلب</a>
+    <a href="#contact">اطلب دلوقتي</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -731,5 +740,18 @@
   </div>
 </footer>
 
+<script>
+var _b = document.getElementById('burger'), _m = document.getElementById('mobileMenu');
+_b.addEventListener('click', function () {
+  var o = _m.classList.toggle('open');
+  _b.setAttribute('aria-expanded', o ? 'true' : 'false');
+});
+_m.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    _m.classList.remove('open');
+    _b.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
 </body>
 </html>
