@@ -617,3 +617,7 @@ img { display: block; max-width: 100%; }
   border-radius: 999px;
 }
 .filling-note { color: var(--ink-soft); font-size: 0.85rem; }
+
+/* whatsapp icon inside buttons */
+.card-link { display: inline-flex; align-items: center; gap: 6px; }
+.wa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
