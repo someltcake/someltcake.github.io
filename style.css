@@ -275,10 +275,10 @@ img { display: block; max-width: 100%; }
   background: var(--green);
   color: #fff;
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   text-decoration: none;
   border-radius: 999px;
-  padding: 8px 18px;
+  padding: 6px 14px;
   transition: opacity 0.15s;
 }
 .card-link:hover { opacity: 0.82; }
