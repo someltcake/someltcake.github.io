@@ -189,6 +189,7 @@ img { display: block; max-width: 100%; }
   width: 158px;
   text-decoration: none;
   text-align: center;
+  color: var(--green);
 }
 .cat-img {
   display: block;
