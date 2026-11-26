@@ -593,3 +593,23 @@ img { display: block; max-width: 100%; }
   .detail-photo { aspect-ratio: 4 / 3.6; }
   .detail-info h2 { font-size: 1.8rem; }
 }
+
+/* ===== fillings block (detail view) ===== */
+.fillings { margin-bottom: 24px; }
+.fillings h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.filling-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.filling-chips span {
+  background: var(--lilac);
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+.filling-note { color: var(--ink-soft); font-size: 0.85rem; }
