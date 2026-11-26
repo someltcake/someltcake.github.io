@@ -497,3 +497,99 @@ img { display: block; max-width: 100%; }
   .cat { width: 128px; }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
 }
+
+/* ===== product detail overlay (Magnolia product page style) ===== */
+.card { cursor: pointer; }
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--white);
+  overflow-y: auto;
+  display: none;
+}
+.detail-overlay.open { display: block; }
+.detail-close {
+  position: fixed;
+  top: 20px;
+  inset-inline-end: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--green);
+  background: var(--white);
+  color: var(--green);
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 210;
+  transition: background 0.15s, color 0.15s;
+}
+.detail-close:hover { background: var(--green); color: #fff; }
+.detail-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1060px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.detail-photo {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--gray-bg);
+  aspect-ratio: 1 / 1.12;
+}
+.detail-photo img { width: 100%; height: 100%; object-fit: cover; }
+.detail-info h2 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+.detail-desc {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+.detail-points {
+  list-style: none;
+  margin-bottom: 30px;
+  border-top: 1px solid var(--line);
+}
+.detail-points li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  padding-inline-start: 18px;
+  position: relative;
+}
+.detail-points li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lilac);
+}
+.detail-info .wa-btn.big { display: block; text-align: center; margin-bottom: 18px; }
+.detail-back {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@media (max-width: 860px) {
+  .detail-inner { grid-template-columns: 1fr; gap: 28px; padding-top: 76px; padding-bottom: 50px; }
+  .detail-photo { aspect-ratio: 4 / 3.6; }
+  .detail-info h2 { font-size: 1.8rem; }
+}
